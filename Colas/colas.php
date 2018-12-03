@@ -5,7 +5,7 @@
  *
  * Estructura de datos primero en entrar, primero en salir
  */
-class cola
+class Colas
 {
 
     /**
