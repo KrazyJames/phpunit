@@ -19,15 +19,12 @@ class colaTest extends TestCase{
         $this->assertNotEquals(0,$cola->getCount());
     }
 
-    public function testItemEliminado(Type $var = null)
+    public function testItemEliminado()
     {
         $cola = new Colas;
         $cola->push(1);
-        $cola->push(2);
-        $old = $cola->getCount();
+        $this->assertNotEmpty($cola->getCount());
         $cola->pop();
-        $new = $cola->getCount();
-        $this->assertNotEquals($old,$new);
-
+        $this->assertEmpty($cola->getCount());
     }
 }
